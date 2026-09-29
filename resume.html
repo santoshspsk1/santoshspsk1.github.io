@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santosh Kumar | Resume</title>
+    <style>
+      :root {
+        --bg: #f3f7fb;
+        --card: #ffffff;
+        --ink: #122333;
+        --muted: #516780;
+        --line: #dfeaf3;
+        --accent: #2a6fdb;
+        --accent-soft: #eaf2ff;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: min(1000px, calc(100% - 32px));
+        margin: 30px auto;
+      }
+
+      .resume-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(24, 41, 68, 0.05);
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        border-bottom: 2px solid var(--line);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(2rem, 4vw, 2.7rem);
+      }
+
+      .role {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .section {
+        margin-bottom: 24px;
+      }
+
+      .section h2 {
+        margin: 0 0 12px;
+        font-size: 1.15rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .summary {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 28px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+        color: var(--muted);
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      .project {
+        margin-bottom: 18px;
+      }
+
+      .project h3 {
+        margin: 0 0 4px;
+        font-size: 1.05rem;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skill {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        border: 1px solid #d9e6ff;
+        color: var(--ink);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .nav a {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--accent);
+        font-weight: 700;
+        margin: 0 10px;
+      }
+
+      .button-row {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-bottom: 18px;
+        flex-wrap: wrap;
+      }
+
+      .print-btn {
+        padding: 10px 16px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      @page {
+        size: A4;
+        margin: 12mm;
+      }
+
+      @media print {
+        body {
+          background: white;
+        }
+
+        .button-row,
+        .nav a:first-child {
+          display: none !important;
+        }
+
+        .resume-card {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+          border-radius: 0;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+
+        .resume-card {
+          padding: 22px 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="button-row">
+        <a class="print-btn" href="index.html">Back to Portfolio</a>
+        <a class="print-btn" href="javascript:window.print()">Download / Save as PDF</a>
+      </div>
+
+      <div class="resume-card">
+        <div class="header">
+          <div>
+            <h1>Santosh Kumar</h1>
+            <p class="role">Aspiring Data Analyst</p>
+          </div>
+
+          <div class="links">
+            <span>LinkedIn: https://www.linkedin.com/in/santoshspda</span>
+            <span>GitHub: https://github.com/santoshspsk1</span>
+            <span>Portfolio: https://santoshspsk1.github.io</span>
+          </div>
+        </div>
+
+        <section class="section">
+          <h2>Professional Summary</h2>
+          <p class="summary">
+            Aspiring Data Analyst building foundational skills in SQL, Tableau, Excel, and Python.
+            Currently strengthening query logic, data cleaning, dashboard design, and business
+            interpretation through guided practice and small portfolio projects. Focused on documenting
+            assumptions, validating results, and communicating findings clearly.
+          </p>
+        </section>
+
+        <div class="two-col">
+          <div>
+            <section class="section">
+              <h2>Core Skills</h2>
+              <div class="skills">
+                <span class="skill">SQL</span>
+                <span class="skill">Tableau</span>
+                <span class="skill">Excel</span>
+                <span class="skill">Python</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">Stack Overflow</span>
+                <span class="skill">Jira</span>
+                <span class="skill">Confluence</span>
+                <span class="skill">Data Cleaning</span>
+                <span class="skill">Dashboarding</span>
+                <span class="skill">KPI Analysis</span>
+                <span class="skill">Reporting</span>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2>Practice Projects In Progress</h2>
+
+              <div class="project">
+                <h3>Sales Performance Dashboard</h3>
+                <div class="meta">SQL, Tableau, Excel</div>
+                <ul>
+                  <li>Planned analysis: compare revenue and sales performance by region and product.</li>
+                  <li>Practice SQL joins, aggregation, and validation on a public or sample dataset.</li>
+                  <li>Build a Tableau dashboard after completing and checking the analysis.</li>
+                </ul>
+              </div>
+
+              <div class="project">
+                <h3>Customer Retention &amp; Churn Analysis</h3>
+                <div class="meta">Python, Excel, SQL</div>
+                <ul>
+                  <li>Planned analysis: explore customer activity and how churn is measured.</li>
+                  <li>Practice cleaning, segmentation, and summary analysis in Python and Excel.</li>
+                  <li>Document assumptions and limitations before making recommendations.</li>
+                </ul>
+              </div>
+
+              <div class="project">
+                <h3>Marketing Campaign ROI Analysis</h3>
+                <div class="meta">Tableau, Excel</div>
+                <ul>
+                  <li>Planned analysis: compare campaign metrics across channels using sample data.</li>
+                  <li>Practice defining conversion rate and return on spend.</li>
+                  <li>Build a Tableau view and report only findings supported by the data.</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <div>
+            <section class="section">
+              <h2>Tools & Workflow</h2>
+              <ul>
+                <li>SQL querying, cleaning, and data validation</li>
+                <li>Excel for data preparation and KPI reporting</li>
+                <li>Python for analysis, automation, and trend detection</li>
+                <li>Tableau for dashboard design and business storytelling</li>
+                <li>GitHub for version control and project organization</li>
+                <li>Jira for task tracking and team workflow visibility</li>
+                <li>Confluence for documentation and stakeholder communication</li>
+              </ul>
+            </section>
+
+            <section class="section">
+              <h2>Career Goal</h2>
+              <ul>
+                <li>To secure a data analyst role where I can apply SQL, Tableau, Excel, Python, and business analytics to improve decisions and performance.</li>
+                <li>To continue building strong portfolio work, sharpen technical skills, and contribute to data-driven teams.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <div class="nav">
+          <a href="https://github.com/santoshspsk1" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/santoshspda" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
