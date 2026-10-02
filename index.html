@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Santosh Kumar | Aspiring Data Analyst</title>
+    <title>Santosh Kumar | Data Analyst</title>
     <meta
       name="description"
-      content="Santosh Kumar is building practical data analysis skills in SQL, Tableau, Excel, and Python through hands-on learning projects."
+      content="Santosh Kumar is a Data Analyst with 7+ years of experience in IT services and Ed-Tech, building data models, KPI frameworks, predictive models, automation and Tableau dashboards that streamline business operations."
     />
     <style>
       :root {
@@ -173,7 +173,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 14px;
-        margin-bottom: 28px;
+        margin-bottom: 30px;
       }
 
       .stats {
@@ -184,12 +184,14 @@
 
       .stat {
         min-width: 130px;
+        max-width: 180px;
       }
 
       .stat strong {
         display: block;
         font-size: 1.9rem;
-        letter-spacing: -0.06em;
+        letter-spacing: -0.04em;
+        color: var(--primary);
       }
 
       .stat span {
@@ -226,82 +228,6 @@
         display: block;
       }
 
-      .dashboard {
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 22px;
-        overflow: hidden;
-        background: linear-gradient(150deg, #162b3f, #0c1726);
-      }
-
-      .dashboard-top {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 14px 18px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        display: block;
-      }
-
-      .dot.red { background: #ff7b7b; }
-      .dot.yellow { background: #ffd166; }
-      .dot.green { background: #7ae7a3; }
-
-      .dashboard-body {
-        padding: 18px;
-      }
-
-      .chart {
-        position: relative;
-        height: 220px;
-        border-radius: 18px;
-        background:
-          linear-gradient(180deg, rgba(105, 210, 231, 0.14), rgba(130, 230, 166, 0.02)),
-          linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-          linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-          rgba(255,255,255,0.02);
-        background-size: auto, 30px 30px, 30px 30px, auto;
-      }
-
-      .chart::before {
-        content: "";
-        position: absolute;
-        inset: 18px 18px 28px 18px;
-        border-radius: 15px;
-        background: linear-gradient(180deg, rgba(105, 210, 231, 0.22), rgba(130, 230, 166, 0.12));
-        clip-path: polygon(0% 78%, 13% 68%, 27% 75%, 42% 52%, 58% 62%, 72% 35%, 86% 28%, 100% 18%, 100% 100%, 0% 100%);
-      }
-
-      .mini-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: 18px;
-      }
-
-      .mini-card {
-        padding: 16px;
-        border-radius: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.02);
-      }
-
-      .mini-card span {
-        color: var(--muted);
-        font-size: 0.82rem;
-      }
-
-      .mini-card strong {
-        display: block;
-        margin-top: 8px;
-        font-size: 1.5rem;
-      }
-
       .section {
         padding: 28px 0 70px;
       }
@@ -327,16 +253,20 @@
       }
 
       .feature-grid,
-      .project-grid,
-      .process-grid,
       .tool-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 22px;
       }
 
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+
       .feature,
-      .project,
+      .case,
       .process,
       .tool {
         padding: 24px;
@@ -354,11 +284,12 @@
         border-radius: 12px;
         background: linear-gradient(135deg, rgba(105, 210, 231, 0.18), rgba(130, 230, 166, 0.18));
         color: var(--primary-2);
-        font-size: 1.2rem;
+        font-size: 1rem;
+        font-weight: 800;
       }
 
       .feature h3,
-      .project h3,
+      .case h3,
       .process h3,
       .tool h3 {
         margin: 0 0 10px;
@@ -366,18 +297,68 @@
       }
 
       .feature p,
-      .project p,
+      .case p,
       .process p,
       .tool p,
-      .project li,
+      .case li,
       .meta {
         color: var(--muted);
       }
 
-      .project {
+      .process {
+        padding: 20px;
+      }
+
+      .process h3 {
+        font-size: 1.05rem;
+      }
+
+      .process p {
+        margin: 0;
+        font-size: 0.94rem;
+      }
+
+      .step {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--primary-2);
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+
+      .case-list {
+        display: grid;
+        gap: 24px;
+      }
+
+      .case {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 28px;
+        padding: 30px;
+      }
+
+      .case-head {
         display: flex;
-        flex-direction: column;
-        gap: 14px;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px 14px;
+        margin-bottom: 12px;
+      }
+
+      .case h3 {
+        font-size: 1.5rem;
+        letter-spacing: -0.03em;
+      }
+
+      .case ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .case li + li {
+        margin-top: 8px;
       }
 
       .tag {
@@ -392,17 +373,39 @@
         font-weight: 700;
       }
 
-      .project ul {
-        margin: 0;
-        padding-left: 18px;
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        align-content: start;
       }
 
-      .project li + li {
-        margin-top: 6px;
+      .metric {
+        padding: 16px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
       }
 
-      .experience {
-        padding: 14px 0 36px;
+      .metric strong {
+        display: block;
+        font-size: 1.6rem;
+        letter-spacing: -0.04em;
+        color: var(--accent);
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .callout {
+        margin: 24px 0 0;
+        padding: 16px 20px;
+        border-radius: 16px;
+        border: 1px dashed rgba(105, 210, 231, 0.35);
+        color: var(--muted);
+        font-size: 0.95rem;
       }
 
       .timeline {
@@ -412,7 +415,7 @@
 
       .timeline-item {
         position: relative;
-        padding: 24px 24px 24px 32px;
+        padding: 6px 24px 18px 32px;
         border-left: 2px solid rgba(105, 210, 231, 0.5);
         margin-left: 10px;
       }
@@ -421,7 +424,7 @@
         content: "";
         position: absolute;
         left: -8px;
-        top: 28px;
+        top: 12px;
         width: 14px;
         height: 14px;
         border-radius: 50%;
@@ -470,6 +473,18 @@
         color: var(--muted);
       }
 
+      .contact-card .email {
+        margin-top: 10px;
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      .contact-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
       footer {
         padding: 28px 0 48px;
         border-top: 1px solid var(--line);
@@ -484,11 +499,19 @@
         flex-wrap: wrap;
       }
 
+      @media (max-width: 960px) {
+        .process-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .case {
+          grid-template-columns: 1fr;
+        }
+      }
+
       @media (max-width: 860px) {
         .hero-grid,
         .feature-grid,
-        .project-grid,
-        .process-grid,
         .tool-grid {
           grid-template-columns: 1fr;
         }
@@ -510,6 +533,11 @@
           flex-direction: column;
           align-items: flex-start;
         }
+
+        .profile-photo-wrap {
+          min-height: 0;
+          aspect-ratio: 4 / 5;
+        }
       }
 
       @media (max-width: 520px) {
@@ -524,6 +552,15 @@
         .stats {
           gap: 18px;
         }
+
+        .process-grid,
+        .metric-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .case {
+          padding: 22px;
+        }
       }
     </style>
   </head>
@@ -537,10 +574,10 @@
 
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
-          <a href="#resume">Resume</a>
-          <a href="#contact">Contact</a>
+          <a href="resume.html">Resume</a>
         </nav>
 
         <a href="#contact" class="button button-primary">Let’s Connect</a>
@@ -551,32 +588,33 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <span class="eyebrow">Data Analyst</span>
+            <span class="eyebrow">Data Analyst · 7+ Years · IT Services &amp; Ed-Tech</span>
             <h1>Turning raw data into smart business decisions.</h1>
             <p class="lead">
-              I am Santosh Kumar, an aspiring Data Analyst building practical skills in SQL, Tableau,
-              Excel, and Python. I am strengthening my foundations through guided practice, small
-              projects, and clear documentation of what I learn.
+              I am Santosh Kumar, a Data Analyst with 7+ years of helping businesses run on
+              trusted data. I started by streamlining operations for small and mid-sized IT
+              companies at INKPROG Technologies. At Careerpedia I helped build an end-to-end Ed-Tech
+              operations platform, and today I implement it for Ed-Tech clients.
             </p>
 
             <div class="cta-row">
-              <a href="#projects" class="button button-primary">View Projects</a>
+              <a href="#work" class="button button-primary">View My Work</a>
               <a href="resume.html" class="button button-secondary">View Resume</a>
-              <a href="resume.html" class="button button-ghost">Download PDF</a>
+              <a href="resume.html#print" class="button button-ghost">Download PDF</a>
             </div>
 
-            <div class="stats" aria-label="Current learning focus">
+            <div class="stats" aria-label="Selected results">
               <div class="stat">
-                <strong>SQL</strong>
-                <span>querying and aggregation</span>
+                <strong>+18%</strong>
+                <span>lead-to-paid conversion</span>
               </div>
               <div class="stat">
-                <strong>Tableau</strong>
-                <span>visual analysis</span>
+                <strong>+22%</strong>
+                <span>course completion</span>
               </div>
               <div class="stat">
-                <strong>Python</strong>
-                <span>analysis fundamentals</span>
+                <strong>74 → 52</strong>
+                <span>median days to placement</span>
               </div>
             </div>
           </div>
@@ -598,130 +636,239 @@
           <div class="section-header">
             <h2>What I bring</h2>
             <p>
-              I combine analytical thinking, data storytelling, and business understanding to uncover
-              trends, improve reporting, and support smarter decisions.
+              7+ years of analytics across IT services operations and the full Ed-Tech learner
+              journey. I connect the data, define the metrics, automate the reporting, and turn it
+              into decisions teams act on.
             </p>
           </div>
 
           <div class="feature-grid">
             <article class="feature">
               <div class="feature-icon" aria-hidden="true">SQL</div>
-              <h3>Data Querying</h3>
+              <h3>Data Modeling &amp; SQL</h3>
               <p>
-                Writing efficient SQL queries to clean, join, and analyze data across multiple tables
-                and sources.
+                Unified MySQL data models, funnel and cohort analysis with window functions, and
+                reconciliation checks that make migrated data trustworthy.
               </p>
             </article>
 
             <article class="feature">
               <div class="feature-icon" aria-hidden="true">PY</div>
-              <h3>Python Analysis</h3>
+              <h3>Predictive Analytics</h3>
               <p>
-                Using Python for exploratory analysis, automation, trend detection, and data cleaning
-                to produce actionable findings.
+                Python (pandas, scikit-learn) for automated data cleaning and reconciliation, and
+                models such as learner dropout-risk scoring turned into weekly action lists.
               </p>
             </article>
 
             <article class="feature">
               <div class="feature-icon" aria-hidden="true">BI</div>
-              <h3>Dashboarding</h3>
+              <h3>KPIs &amp; Dashboards</h3>
               <p>
-                Building meaningful dashboards in Tableau and Excel that communicate insights clearly to
-                teams and decision-makers.
+                Metric dictionaries, Tableau dashboards and bi-weekly KPI reviews that give
+                leadership and module owners one shared view of performance.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="projects">
+      <section class="section" id="work">
         <div class="container">
           <div class="section-header">
-            <h2>Selected projects</h2>
+            <h2>Selected work</h2>
             <p>
-              These are practice projects in progress, not claimed client or workplace results. I will add
-              verified analysis, findings, and links as I complete each one.
+              Three bodies of work across two roles, most recent first: an Ed-Tech platform built
+              in-house and brought to clients, and operations analytics for IT companies before that.
             </p>
           </div>
 
-          <div class="project-grid">
-            <article class="project">
-              <span class="tag">SQL • Tableau • Excel</span>
-              <h3>Sales Performance Dashboard</h3>
-              <p>
-                Practice goal: explore sales performance by product, region, and time using a public or practice dataset.
-              </p>
-              <ul>
-                <li>Planned tools: SQL, Excel, and Tableau</li>
-                <li>Practice joins, aggregation, and KPI definitions</li>
-                <li>Publish findings only after analysis is completed and checked</li>
-              </ul>
+          <div class="case-list">
+            <article class="case">
+              <div>
+                <div class="case-head">
+                  <span class="tag">SQL • Python • Tableau</span>
+                  <span class="meta">Jul 2023 – Dec 2024</span>
+                </div>
+                <h3>In-house Ed-Tech Operations Platform</h3>
+                <p>
+                  Each business group ran on its own tools, so no one could follow a learner from
+                  first enquiry to job offer. We built one platform for the whole organization, and I
+                  owned the data and analytics layer.
+                </p>
+                <ul>
+                  <li>Designed a unified MySQL data model linking 7 modules (Sales, Marketing, Operations, Learning, Assessment, Placements, Recruiter Portal) under a single learner ID.</li>
+                  <li>Defined a 42-KPI metric dictionary that became the single source of truth across teams.</li>
+                  <li>Found the biggest funnel drop-off at demo class → enrolment and redirected 30% of marketing spend to channels with 2.4× higher placement yield.</li>
+                  <li>Built cohort retention analysis and a dropout-risk model (0.81 AUC) that feeds mentors weekly at-risk learner lists.</li>
+                  <li>Recalibrated readiness-score cut-offs using assessment-to-offer outcomes, and built recruiter-engagement dashboards in Tableau.</li>
+                </ul>
+              </div>
+
+              <div class="metric-grid" aria-label="Project results">
+                <div class="metric"><strong>+18%</strong><span>lead-to-paid conversion</span></div>
+                <div class="metric"><strong>+22%</strong><span>course completion</span></div>
+                <div class="metric"><strong>+15%</strong><span>interview-to-offer conversion</span></div>
+                <div class="metric"><strong>74 → 52</strong><span>median days to placement</span></div>
+                <div class="metric"><strong>+35%</strong><span>monthly active recruiters</span></div>
+                <div class="metric"><strong>42</strong><span>KPIs in one metric dictionary</span></div>
+              </div>
             </article>
 
-            <article class="project">
-              <span class="tag">Python • Excel • Analysis</span>
-              <h3>Customer Retention &amp; Churn Analysis</h3>
-              <p>
-                Practice goal: examine customer activity data and learn how retention and churn are measured.
-              </p>
-              <ul>
-                <li>Planned tools: Python, Excel, and SQL</li>
-                <li>Practice data cleaning, grouping, and segment comparisons</li>
-                <li>Document assumptions and avoid claiming causation from correlation</li>
-              </ul>
-            </article>
+            <article class="case">
+              <div>
+                <div class="case-head">
+                  <span class="tag">Client Delivery • Migration • KPIs</span>
+                  <span class="meta">Jan 2025 – Present</span>
+                </div>
+                <h3>Client Platform Implementation</h3>
+                <p>
+                  We now implement the platform for B2C tech-upskilling companies that run several
+                  program lines with upfront and post-placement fee models. I own the analytics
+                  workstream, moving each client from separate tools for each function onto one
+                  platform and a shared set of metrics.
+                </p>
+                <ul>
+                  <li>Mapped client data onto the unified data model under a single learner ID, resolving duplicates across lead, enrolment, assessment and placement sources.</li>
+                  <li>Built SQL reconciliation checks for every migration cut-over and resolved exceptions with client data owners before sign-off.</li>
+                  <li>Adapted the KPI dictionary to each client's programs and fee model, including placement rate, offer CTC and post-placement fee realisation.</li>
+                  <li>Rolled out funnel, retention, at-risk learner, assessment-readiness and recruiter dashboards, then trained client teams and tracked adoption after go-live.</li>
+                </ul>
+              </div>
 
-            <article class="project">
-              <span class="tag">Tableau • Excel • Reporting</span>
-              <h3>Marketing Campaign ROI Analysis</h3>
-              <p>
-                Practice goal: compare campaign metrics across channels using a public or practice dataset.
-              </p>
-              <ul>
-                <li>Planned tools: Tableau and Excel</li>
-                <li>Practice defining conversion rate and return on spend</li>
-                <li>Separate observed patterns from recommendations</li>
-              </ul>
+              <div class="metric-grid" aria-label="Project scope">
+                <div class="metric"><strong>8</strong><span>business functions in scope, enquiry to placement</span></div>
+                <div class="metric"><strong>1</strong><span>learner ID across every system</span></div>
+                <div class="metric"><strong>2-week</strong><span>Agile sprints through UAT</span></div>
+                <div class="metric"><strong>Bi-weekly</strong><span>KPI reviews with client leaders</span></div>
+              </div>
             </article>
+            <article class="case">
+              <div>
+                <div class="case-head">
+                  <span class="tag">MySQL • Python • Tableau • Excel</span>
+                  <span class="meta">INKPROG Technologies · Jul 2019 – Jun 2023</span>
+                </div>
+                <h3>Operations Analytics for IT Services Companies</h3>
+                <p>
+                  As the only data analyst at a software, design and marketing studio, reporting to
+                  the founder, I helped small and mid-sized IT companies streamline sales, delivery,
+                  resourcing and billing, and ran the studio's own business reporting.
+                </p>
+                <ul>
+                  <li>Mapped client sales, delivery, resourcing, billing and support workflows and audited their data for duplicates, manual hand-offs and reporting gaps.</li>
+                  <li>Designed MySQL reporting schemas and KPI definitions for client CRMs, admin panels and internal tools built by our engineering team.</li>
+                  <li>Built Tableau dashboards on pipeline, project budget vs actuals, billable utilisation, receivables ageing and SLA compliance, replacing manual Excel reports.</li>
+                  <li>Automated extraction, cleaning and reconciliation with Python and SQL, making month-end reporting a scheduled, repeatable process.</li>
+                  <li>Built the studio's own pipeline-to-win and project-margin reporting to inform pricing and service focus.</li>
+                </ul>
+              </div>
 
-            <article class="project">
-              <span class="tag">SQL • Python • ETL</span>
-              <h3>Data Cleaning and Transformation Pipeline</h3>
-              <p>
-                Practice goal: build a repeatable cleaning workflow for a small, imperfect dataset.
-              </p>
-              <ul>
-                <li>Planned tools: SQL and Python</li>
-                <li>Practice identifying duplicates, missing values, and type issues</li>
-                <li>Record each cleaning decision and its effect on row counts</li>
-              </ul>
+              <div class="metric-grid" aria-label="Role scope">
+                <div class="metric"><strong>4 yrs</strong><span>sole data analyst, reporting to the founder</span></div>
+                <div class="metric"><strong>80 / 20</strong><span>client delivery / internal analytics</span></div>
+                <div class="metric"><strong>5</strong><span>operations areas: sales, delivery, resourcing, billing, support</span></div>
+                <div class="metric"><strong>SME</strong><span>IT services clients (confidential)</span></div>
+              </div>
             </article>
+          </div>
 
-            <article class="project">
-              <span class="tag">Jira • Confluence • Workflow</span>
-              <h3>Agile Reporting and Team Visibility</h3>
-              <p>
-                Practice goal: use a mock sprint dataset to summarize delivery status and blockers.
-              </p>
-              <ul>
-                <li>Planned tools: Jira and Confluence</li>
-                <li>Practice defining a small set of delivery metrics</li>
-                <li>Clearly label mock data and avoid presenting it as workplace experience</li>
-              </ul>
-            </article>
+          <p class="callout">
+            Client names and data from both roles are confidential, so this work is described without identifying details.
+          </p>
+        </div>
+      </section>
 
-            <article class="project">
-              <span class="tag">GitHub • Learning • Practice</span>
-              <h3>Portfolio and Knowledge Repository</h3>
-              <p>
-                Practice goal: organize completed learning work in public GitHub repositories.
-              </p>
-              <ul>
-                <li>Keep credentials, database dumps, and private configuration out of Git</li>
-                <li>Document the question, methods, checks, and limitations</li>
-                <li>Publish only work that is complete and reproducible</li>
-              </ul>
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section-header">
+            <h2>How I deliver for clients</h2>
+            <p>
+              The analytics playbook I follow on every client implementation, from first data
+              review to post-launch adoption.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <article class="process">
+              <span class="step">STEP 01</span>
+              <h3>Assess</h3>
+              <p>Profile each function's data for completeness, duplicates and ID conflicts.</p>
             </article>
+            <article class="process">
+              <span class="step">STEP 02</span>
+              <h3>Map</h3>
+              <p>Fit client data to the unified model under a single learner ID.</p>
+            </article>
+            <article class="process">
+              <span class="step">STEP 03</span>
+              <h3>Plan</h3>
+              <p>Sequence modules by business impact and data readiness in a phased roadmap.</p>
+            </article>
+            <article class="process">
+              <span class="step">STEP 04</span>
+              <h3>Validate</h3>
+              <p>Reconcile counts, keys and fields at every migration cut-over.</p>
+            </article>
+            <article class="process">
+              <span class="step">STEP 05</span>
+              <h3>Define</h3>
+              <p>Adapt the KPI dictionary to the client's programs and capture pre-launch baselines.</p>
+            </article>
+            <article class="process">
+              <span class="step">STEP 06</span>
+              <h3>Visualize</h3>
+              <p>Roll out funnel, retention, readiness and recruiter dashboards in Tableau.</p>
+            </article>
+            <article class="process">
+              <span class="step">STEP 07</span>
+              <h3>Hand over</h3>
+              <p>Run UAT, document definitions in Confluence and train client teams.</p>
+            </article>
+            <article class="process">
+              <span class="step">STEP 08</span>
+              <h3>Adopt</h3>
+              <p>Track adoption after go-live and run bi-weekly KPI reviews.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-header">
+            <h2>Experience &amp; education</h2>
+            <p>
+              Engineering foundations, a management lens on people and outcomes, and 7+ years of
+              hands-on analytics in IT services and Ed-Tech.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>Data Analyst, Careerpedia</h3>
+              <div class="meta">Jul 2023 – Present</div>
+              <p>
+                Client platform implementation (Jan 2025 – Present) and the in-house Ed-Tech
+                operations platform (Jul 2023 – Dec 2024).
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h3>Data Analyst, INKPROG Technologies</h3>
+              <div class="meta">Jul 2019 – Jun 2023</div>
+              <p>
+                Sole analyst streamlining sales, delivery, resourcing and billing reporting for small
+                and mid-sized IT companies, plus the studio's internal analytics.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h3>MBA, Human Resources</h3>
+              <div class="meta">Alliance School of Business · 2016</div>
+            </div>
+            <div class="timeline-item">
+              <h3>B.Tech, Electronics &amp; Communication Engineering</h3>
+              <div class="meta">JNTU · 2014</div>
+            </div>
           </div>
         </div>
       </section>
@@ -731,63 +878,23 @@
           <div class="section-header">
             <h2>Core skills</h2>
             <p>
-              My toolkit covers data analysis, reporting, project coordination, and task tracking.
+              The tools and methods I use every day.
             </p>
           </div>
 
           <div class="tool-grid">
             <div class="tool">
-              <h3>Data Analytics</h3>
-              <p>SQL, Excel, Python, data cleaning, trend analysis, KPI tracking</p>
+              <h3>Data &amp; Analysis</h3>
+              <p>SQL, MySQL (Server, Workbench), window functions, data modeling, Python (pandas, scikit-learn), Excel, operations analytics</p>
             </div>
             <div class="tool">
-              <h3>Visualization</h3>
-              <p>Tableau, dashboard design, executive reporting, business insights</p>
+              <h3>BI &amp; Reporting</h3>
+              <p>Tableau, KPI design, funnel and cohort analysis, leadership dashboards, data storytelling</p>
             </div>
             <div class="tool">
-              <h3>Collaboration Tools</h3>
-              <p>GitHub, Jira, Confluence, Stack Overflow, documentation and workflow management</p>
+              <h3>Delivery</h3>
+              <p>Agile sprints, JIRA, Confluence, GitHub, process mapping, data migration and validation, UAT, client training</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="resume">
-        <div class="container">
-          <div class="section-header">
-            <h2>Resume snapshot</h2>
-            <p>
-              A quick summary of the profile I am building for data analyst roles and portfolio opportunities.
-            </p>
-          </div>
-
-          <div class="feature-grid">
-            <article class="feature">
-              <div class="feature-icon" aria-hidden="true">01</div>
-              <h3>Profile</h3>
-              <p>
-                Data Analyst with working knowledge of SQL, Python, Tableau, Excel, GitHub, Jira,
-                and Confluence, focused on turning data into business-ready insights.
-              </p>
-            </article>
-
-            <article class="feature">
-              <div class="feature-icon" aria-hidden="true">02</div>
-              <h3>Strengths</h3>
-              <p>
-                Data cleaning, dashboarding, KPI analysis, process documentation, stakeholder support,
-                and problem-solving through structured insight generation.
-              </p>
-            </article>
-
-            <article class="feature">
-              <div class="feature-icon" aria-hidden="true">03</div>
-              <h3>Career Goal</h3>
-              <p>
-                To grow as a Data Analyst in a role where I can use analytics, business understanding,
-                and reporting tools to support better decisions.
-              </p>
-            </article>
           </div>
         </div>
       </section>
@@ -796,14 +903,15 @@
         <div class="container">
           <div class="contact-card">
             <div>
-              <h3>Let’s connect and grow together.</h3>
+              <h3>Let’s talk data.</h3>
               <p>
-                I am actively building my data analytics portfolio and looking for opportunities to apply
-                my skills in SQL, Tableau, Excel, Python, and reporting tools.
+                Want to discuss analytics, Ed-Tech platforms or a Data Analyst role? I'd be glad to hear from you.
               </p>
+              <p class="email">santoshspsk1@gmail.com</p>
             </div>
-            <div style="display:flex; gap:12px; flex-wrap:wrap;">
-              <a href="https://www.linkedin.com/in/santoshspda" class="button button-primary" target="_blank" rel="noreferrer">LinkedIn</a>
+            <div class="contact-actions">
+              <a href="mailto:santoshspsk1@gmail.com" class="button button-primary">Email Me</a>
+              <a href="https://www.linkedin.com/in/santoshspda" class="button button-secondary" target="_blank" rel="noreferrer">LinkedIn</a>
               <a href="https://github.com/santoshspsk1" class="button button-secondary" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
@@ -817,7 +925,7 @@
           <span class="brand-mark" aria-hidden="true"></span>
           SANTOSH KUMAR
         </div>
-        <span>Data Analyst • SQL • Tableau • Python</span>
+        <span>Data Analyst • SQL • Python • Tableau</span>
       </div>
     </footer>
   </body>
