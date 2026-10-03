@@ -166,6 +166,10 @@
         border-top: 1px solid var(--line);
       }
 
+      .job-next + ul {
+        margin-top: 8px;
+      }
+
       .job-next + .context {
         margin-bottom: 8px;
       }
@@ -297,7 +301,7 @@
     <div class="container">
       <div class="button-row">
         <a class="print-btn" href="index.html">Back to Portfolio</a>
-        <button class="print-btn" type="button" onclick="window.print()">Download / Save as PDF</button>
+        <a class="print-btn" href="Santosh-Kumar-Data-Analyst-Resume.pdf" download>Download PDF</a>
       </div>
 
       <main class="resume-card">
@@ -309,8 +313,6 @@
 
           <div class="links">
             <a href="mailto:santoshspsk1@gmail.com">santoshspsk1@gmail.com</a>
-            <a href="https://www.linkedin.com/in/santoshspda" target="_blank" rel="noreferrer">linkedin.com/in/santoshspda</a>
-            <a href="https://github.com/santoshspsk1" target="_blank" rel="noreferrer">github.com/santoshspsk1</a>
             <a href="https://santoshspsk1.github.io" target="_blank" rel="noreferrer">santoshspsk1.github.io</a>
           </div>
         </header>
@@ -360,7 +362,7 @@
 
           <div class="project">
             <div class="project-head">
-              <h4>Client Platform Implementation, Ed-Tech Clients (confidential)</h4>
+              <h4>Client Platform Implementation</h4>
               <span class="dates">Jan 2025 – Present</span>
             </div>
             <p class="context">
@@ -422,6 +424,24 @@
           <p class="tools">
             <strong>Tools:</strong> MySQL, Python (pandas), Tableau, Excel
           </p>
+
+          <div class="job-head job-next">
+            <h3>Talent Acquisition Specialist, Deloitte</h3>
+            <span class="dates">Oct 2018 – Apr 2019</span>
+          </div>
+          <ul>
+            <li>Managed large-scale, cross-border hiring cycles across technical domains, balancing business group needs with rapid offer delivery and operational excellence.</li>
+            <li>Executed multi-channel sourcing strategies for diverse hires, combining Boolean search with community engagement (GitHub, Stack Overflow), direct sourcing and referrals to improve hiring outcomes.</li>
+          </ul>
+
+          <div class="job-head job-next">
+            <h3>Talent Sourcer, Microsoft</h3>
+            <span class="dates">Aug 2016 – Sep 2018</span>
+          </div>
+          <ul>
+            <li>Sourced talent for high-impact engineering and leadership roles across multiple regions, leveraging diversity programs and pipeline analytics to improve talent accessibility and hiring cycle times.</li>
+            <li>Identified high-quality candidates through job portals, LinkedIn Recruiter, GitHub and networking channels.</li>
+          </ul>
         </section>
 
         <section class="section">
@@ -437,11 +457,5 @@
         </section>
       </main>
     </div>
-
-    <script>
-      if (location.hash === "#print") {
-        window.addEventListener("load", () => window.print());
-      }
-    </script>
   </body>
 </html>
